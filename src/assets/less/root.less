@@ -7,13 +7,15 @@
 @media only screen and (min-width: 0rem) {
   // Website colors
   :root {
-    --primary: #eda708;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
-    --headerColor: #fff;
-    --bodyTextColor: #f7f7f7;
-    --bodyTextColorWhite: #fafbfc;
+    --primary: #b0b0b0;
+    --primaryLight: #e0e0e0;
+    --secondary: #888888;
+    --secondaryLight: #cccccc;
+    --headerColor: #f7f7f7;
+    --bodyTextColor: #d1d1d1;
+    --bodyTextColorWhite: #f7f7f7;
+    --sectionBg: #232323;
+    --sectionBgLight: #2e2e2e;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -21,11 +23,14 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --headingFont: 'Oswald', Arial, sans-serif;
+    --bodyFont: 'Roboto', Arial, sans-serif;
   }
 
   body {
     margin: 0;
     padding: 0;
+    font-family: var(--bodyFont);
   }
 
   *,
@@ -46,15 +51,13 @@
     display: block;
   }
 
-  .cs-title {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
+  .cs-title, .section-title {
+    font-family: var(--headingFont);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: clamp(1.7rem, 6vw, 2.5rem);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .cs-text {
@@ -274,6 +277,9 @@
   h6 {
     margin: 0;
     color: var(--headerColor);
+    font-family: var(--headingFont);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
   }
 
   p,
@@ -383,9 +389,12 @@ html {
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     background-color: #1a1a1a;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+    border-bottom: 1.5px solid rgba(237,167,8,0.12);
     position: fixed;
     z-index: 10000;
+    background: rgba(26,26,26,0.85);
+    backdrop-filter: blur(8px);
 
     &:before {
       content: "";
@@ -440,12 +449,14 @@ html {
       justify-content: center;
       align-items: center;
       z-index: 10;
+      text-decoration: none;
 
       img {
         width: 100%;
         height: 100%;
         /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
+        filter: drop-shadow(0 2px 8px rgba(237,167,8,0.15));
       }
     }
 
@@ -477,6 +488,20 @@ html {
         bottom: 100%;
         opacity: 0;
       }
+    }
+
+    .cs-logo-text {
+      font-family: var(--headingFont);
+      font-weight: 700;
+      font-size: clamp(0.85rem, 3.2vw, 1.1rem); /* Slightly bigger */
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      text-align: left;
+      filter: drop-shadow(0 2px 8px rgba(237,167,8,0.15));
+      line-height: 1.2;
+      display: inline-block;
+      max-width: 100%;
     }
 
     .cs-box {
@@ -546,9 +571,9 @@ html {
       max-height: 65vh;
       overflow: scroll;
       display: flex;
-      justify-content: flex-start;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: (20/16rem);
       background-color: #1a1a1a;
     }
@@ -672,12 +697,22 @@ html {
       justify-content: center;
       align-items: center;
       z-index: 100;
+      text-decoration: none;
+
+      .cs-logo-text {
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
+        letter-spacing: 0.05em;
+        text-align: center;
+        white-space: nowrap;
+        color: var(--primary); /* Ensure color is applied */
+      }
 
       img {
         width: 100%;
         height: 100%;
         /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
+        filter: drop-shadow(0 2px 8px rgba(237,167,8,0.15));
       }
     }
 
@@ -780,9 +815,9 @@ html {
     padding: var(--sectionPadding);
     /* 30px - 50px */
     padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
-    background-color: #1a1a1a;
+    background-color: #232323;
     position: relative;
-
+    margin-top: -1px;
     .cs-wave {
       width: 100%;
       height: auto;
@@ -1044,5 +1079,45 @@ html {
       top: auto;
       right: auto;
     }
+  }
+}
+
+.cs-li-link.cs-active {
+  position: relative;
+  color: var(--primary);
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: -8px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: width 0.3s;
+    width: 100%;
+  }
+}
+
+.cs-li-link {
+  transition: color 0.3s;
+  position: relative;
+
+  &:hover,
+  &.cs-active {
+    color: var(--primary);
+  }
+
+  &:hover:after,
+  &.cs-active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: -8px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    width: 100%;
+    transition: width 0.3s;
   }
 }

@@ -1,0 +1,204 @@
+---
+title: "Our Services | Andrews Gentlemans Hairdressers"
+description: "Discover the range of traditional and modern barbering services offered at Andrews Gentlemans Hairdressers in Bristol. From classic cuts to luxury shaves, we've got you covered."
+preloadImg: "/assets/images/barber-tools-hero.jpg" # Suggested new hero image
+permalink: "services/"
+eleventyNavigation:
+  key: Services
+  order: 300 # Adjusted order if needed
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/services.css" />
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                 Service Hero                 -->
+<!-- ============================================ -->
+<section id="service-hero">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Craft</span>
+      <h1 class="cs-title">Expert Barbering, Tailored For You</h1>
+      <p class="cs-text">
+        At Andrews Gentlemans Hairdressers, we blend time-honored techniques with contemporary styling to provide a premium grooming experience. Step into our shop and leave looking sharp and feeling refreshed.
+      </p>
+      <a href="/contact/" class="cs-button-solid">Visit Us</a>
+    </div>
+    <div class="cs-image-wrapper">
+      <img src="/assets/images/hair-gel.jpg" alt="Hair gel products" loading="lazy" decoding="async" width="1200" height="800">
+      <div class="cs-image-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Service Intro/Philosophy          -->
+<!-- ============================================ -->
+<section id="service-intro">
+  <div class="cs-container">
+    <div class="cs-image-side">
+      <img src="/assets/images/exterior.webp" alt="Exterior of Andrews Gentlemans Hairdresser" loading="lazy" decoding="async" width="500" height="650">
+    </div>
+    <div class="cs-content-side">
+      <span class="cs-topper">Our Philosophy</span>
+      <h2 class="cs-title">More Than Just a Haircut, It's an Experience</h2>
+      <p class="cs-text">
+        Since 1951, our commitment has been to provide exceptional service in a welcoming atmosphere. We believe a great barbershop is a place where clients can relax, enjoy good conversation, and receive a haircut or shave that's perfectly suited to their style.
+      </p>
+      <ul class="cs-perks-list">
+        <li class="cs-perk-item">
+          <img class="cs-perk-icon" src="/assets/svgs/years.svg" alt="years icon" width="40" height="40">
+          <span class="cs-perk-text">Decades of Experience</span>
+        </li>
+        <li class="cs-perk-item">
+          <img class="cs-perk-icon" src="/assets/svgs/quality.svg" alt="quality icon" width="40" height="40">
+          <span class="cs-perk-text">Premium Quality Products</span>
+        </li>
+        <li class="cs-perk-item">
+          <img class="cs-perk-icon" src="/assets/svgs/barber-customer.svg" alt="barber customer" width="40" height="40">
+          <span class="cs-perk-text">Personalised Consultations</span>
+        </li>
+      </ul>
+      <a href="/about/" class="cs-button-transparent">Learn Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Signature Services              -->
+<!-- ============================================ -->
+<section id="signature-services">
+  <div class="cs-container">
+    <div class="cs-heading">
+      <span class="cs-topper">What We Do Best</span>
+      <h2 class="cs-title">Our Signature Grooming Services</h2>
+      <p class="cs-text">
+        Explore our range of services designed to meet the needs of the modern gentleman. Each service is performed with precision and care by our skilled barbers.
+      </p>
+    </div>
+    <div class="cs-services-grid">
+      <!-- Service 1: Classic Haircut -->
+      <div class="cs-service-item">
+        <div class="cs-icon-wrapper">
+          <img src="/assets/svgs/scissors.svg" alt="scissors icon" class="cs-icon" width="50" height="50">
+        </div>
+        <div class="cs-service-content">
+          <h3 class="cs-service-name">Classic Haircuts</h3>
+          <p class="cs-service-desc">Timeless styles, expertly executed. From sharp business cuts to relaxed weekend looks, tailored to your preference.</p>
+          <span class="cs-service-price">From £15</span>
+        </div>
+      </div>
+      <!-- Service 2: Hot Towel Shave -->
+      <div class="cs-service-item">
+        <div class="cs-icon-wrapper">
+          <img src="/assets/svgs/razor.svg" alt="razor icon" class="cs-icon" width="50" height="50">
+        </div>
+        <div class="cs-service-content">
+          <h3 class="cs-service-name">Hot Towel Shaves</h3>
+          <p class="cs-service-desc">The ultimate grooming indulgence. Experience a close, comfortable shave with hot towels and premium balms.</p>
+          <span class="cs-service-price">From £20</span>
+        </div>
+      </div>
+      <!-- Service 3: Beard Trim & Styling -->
+      <div class="cs-service-item">
+        <div class="cs-icon-wrapper">
+          <img src="/assets/svgs/beard.svg" alt="beard icon" class="cs-icon" width="50" height="50">
+        </div>
+        <div class="cs-service-content">
+          <h3 class="cs-service-name">Beard Trim & Styling</h3>
+          <p class="cs-service-desc">Keep your beard in perfect shape. Our barbers sculpt, trim, and line-up beards with precision and care.</p>
+          <span class="cs-service-price">From £20</span>
+        </div>
+      </div>
+      <!-- Service 4: Skin Fades -->
+      <div class="cs-service-item">
+        <div class="cs-icon-wrapper">
+          <img src="/assets/svgs/fade.svg" alt="skin fade icon" class="cs-icon" width="50" height="50">
+        </div>
+        <div class="cs-service-content">
+          <h3 class="cs-service-name">Skin Fades</h3>
+          <p class="cs-service-desc">Sharp, clean, and modern. Our barbers are masters of the fade, delivering seamless blends and crisp lines.</p>
+          <span class="cs-service-price">From £18</span>
+        </div>
+      </div>
+      <!-- Service 5: Children's Haircuts -->
+      <div class="cs-service-item">
+        <div class="cs-icon-wrapper">
+          <img src="/assets/svgs/child-haircut.svg" alt="child haircut icon" class="cs-icon" width="50" height="50">
+        </div>
+        <div class="cs-service-content">
+          <h3 class="cs-service-name">Children's Haircuts</h3>
+          <p class="cs-service-desc">A comfortable and friendly experience for our younger clients, ensuring they leave with a smart, tidy cut.</p>
+          <span class="cs-service-price">From £12</span>
+        </div>
+      </div>
+      <!-- Service 6: Senior Styling -->
+      <div class="cs-service-item">
+        <div class="cs-icon-wrapper">
+          <img src="/assets/svgs/senior-haircut.svg" alt="senior haircut icon" class="cs-icon" width="50" height="50">
+        </div>
+        <div class="cs-service-content">
+          <h3 class="cs-service-name">Senior Styling</h3>
+          <p class="cs-service-desc">Classic cuts for the discerning gentleman, provided with the respect and attention to detail you deserve.</p>
+          <span class="cs-service-price">From £15</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Service Highlight/USP            -->
+<!-- ============================================ -->
+<section id="service-highlight">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Why Choose Us?</span>
+      <h2 class="cs-title">The Andrews Difference: Quality & Tradition</h2>
+      <p class="cs-text">
+        We're not just a barbershop; we're a Bristol institution. Our clients choose us for our unwavering commitment to quality, our skilled barbers, and the authentic, welcoming atmosphere we've cultivated for over 70 years.
+      </p>
+      <ul class="cs-feature-list">
+        <li class="cs-feature-item">
+          <img src="/assets/svgs/medal.svg" alt="medal icon" class="cs-feature-icon">
+          <strong>Master Barbers:</strong> Highly skilled and experienced professionals.
+        </li>
+        <li class="cs-feature-item">
+          <img src="/assets/svgs/hygiene.svg" alt="hygiene icon" class="cs-feature-icon">
+          <strong>Impeccable Hygiene:</strong> Cleanliness and safety are paramount.
+        </li>
+        <li class="cs-feature-item">
+          <img src="/assets/svgs/location.svg" alt="location icon" class="cs-feature-icon">
+          <strong>Convenient Location:</strong> Easy to find in the heart of Bristol.
+        </li>
+        <li class="cs-feature-item">
+          <img src="/assets/svgs/walk-in.svg" alt="walk-in icon" class="cs-feature-icon">
+          <strong>Walk-Ins Welcome:</strong> No appointment necessary for most services.
+        </li>
+      </ul>
+    </div>
+    <div class="cs-image-collage">
+      <img src="/assets/images/exterior.webp" alt="Barbershop exterior" class="cs-collage-img cs-collage-img1" loading="lazy">
+      <img src="/assets/images/interior4.webp" alt="Barbershop interior" class="cs-collage-img cs-collage-img2" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Booking CTA                  -->
+<!-- ============================================ -->
+<section id="booking-cta">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Ready for Your Best Look Yet?</h2>
+      <p class="cs-text">
+        Visit Andrews Gentlemans Hairdressers for a premium grooming experience. Walk-ins are always welcome, or contact us for specific inquiries.
+      </p>
+      <a href="/contact/" class="cs-button-solid">Find Us</a>
+      <a href="tel:07708698960" class="cs-button-transparent">Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

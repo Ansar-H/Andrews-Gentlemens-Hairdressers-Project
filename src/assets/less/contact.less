@@ -5,7 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #contact-1388 {
-    padding-top: clamp(10rem, 25vw, 15rem);
+    padding-top: clamp(20rem, 25vw, 15rem);
     padding-right: var(--sectionPaddingRight, 1rem);
     padding-bottom: var(--sectionPaddingBottom, 3.75rem);
     padding-left: var(--sectionPaddingLeft, 1rem);
@@ -270,6 +270,204 @@
   #contact-1388 {
     .cs-graphic {
       display: block;
+    }
+  }
+}
+
+/*-- -------------------------- -->
+<---      Contact Page Hero     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-hero {
+    padding: clamp(4rem, 10vw, 6rem) 1rem clamp(2rem, 5vw, 3rem);
+    padding-top: 8rem;
+    background-color: var(--sectionBgDark, #1a1a1a); // Fallback color
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -1px; // To overlap with potential previous section border
+
+    .cs-container {
+      width: 100%;
+      max-width: 80rem; // Standard max width
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cs-content {
+      max-width: 45rem;
+    }
+
+    .cs-topper {
+      display: inline-block;
+      color: var(--primary, #eda708);
+      font-weight: 700;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cs-title {
+      font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+      color: var(--bodyTextColor, #f7f7f7);
+      margin: 0 0 1rem 0;
+      line-height: 1.2;
+    }
+
+    .cs-text {
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      color: var(--bodyTextColor, #f7f7f7);
+      opacity: 0.85;
+      line-height: 1.6;
+      max-width: 40rem;
+      margin: auto;
+    }
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-hero {
+    padding: clamp(6rem, 12vw, 8rem) 1rem clamp(3rem, 7vw, 5rem);
+    .cs-title {
+        font-size: clamp(2.75rem, 6vw, 4rem);
+    }
+  }
+}
+
+/*-- -------------------------- -->
+<---       Contact Details      -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-details-form { // ID remains for consistency, though form is gone
+    padding: var(--sectionPadding, clamp(3rem, 8vw, 5rem) 1rem);
+    background-color: var(--sectionBgLight, #f8f8f8);
+
+    .cs-container {
+      width: 100%;
+      max-width: 50rem; // Adjusted max-width as it's single column now
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Center the info wrapper
+      text-align: center; // Center text within the info wrapper
+    }
+
+    .cs-section-title {
+      font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      color: #1a1a1a;
+      margin: 0 0 1.5rem 0;
+      text-align: center; // Ensure title is centered
+    }
+
+    .cs-contact-info-wrapper {
+      width: 100%; // Take full width of its centered container
+      background-color: var(--cardBg, #fff);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+      .cs-info-text {
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        color: var(--bodyTextColorDark, #333);
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        text-align: left; // Keep detailed text left-aligned for readability
+      }
+
+      .cs-info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+        text-align: left; // Keep list items left-aligned
+      }
+
+      .cs-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .cs-info-icon {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-top: 0.25rem;
+      }
+
+      .cs-info-content {
+        h3.cs-info-header {
+          font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+          color: #1a1a1a;
+          font-weight: 700;
+          margin: 0 0 0.35rem 0;
+        }
+        p, a {
+          font-size: clamp(0.9rem, 1.8vw, 1rem);
+          color: var(--bodyTextColorDark, #333);
+          line-height: 1.6;
+          text-decoration: none;
+          margin: 0;
+        }
+        a:hover {
+          color: var(--primary, #eda708);
+          text-decoration: underline;
+        }
+        .cs-info-subtext {
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }
+      }
+    }
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-details-form {
+    .cs-container {
+      max-width: 55rem; // Can be a bit wider on desktop
+    }
+     .cs-contact-info-wrapper {
+        padding: clamp(2rem, 5vw, 3rem); // More padding on desktop
+     }
+  }
+}
+
+/*-- -------------------------- -->
+<---             Map            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-map-section {
+    padding: 0; 
+    background-color: var(--sectionBgDark, #1a1a1a); 
+    line-height: 0; 
+
+    .cs-map-container { 
+        width: 100%;
+        height: 25rem; 
+        overflow: hidden; 
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-map-section {
+    .cs-map-container {
+      height: 30rem; 
     }
   }
 }

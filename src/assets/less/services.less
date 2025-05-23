@@ -1,0 +1,585 @@
+/*-- -------------------------- -->
+<---        Service Hero        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #service-hero {
+    padding: clamp(8rem, 20vw, 10rem) 1rem clamp(4rem, 10vw, 6rem) 1rem;
+    background-color: #f8f8f8; // Lighter background for services page
+    position: relative;
+    overflow: hidden;
+    margin-top: -1px;
+
+    .cs-container {
+      width: 100%;
+      max-width: 80rem; // Standard max width
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .cs-content {
+      max-width: 45rem;
+      z-index: 10;
+    }
+
+    .cs-topper {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cs-title {
+      font-size: clamp(2.5rem, 6vw, 3.75rem);
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .cs-text {
+      color: #333;
+      margin-bottom: 2.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      line-height: 1.6;
+    }
+
+    .cs-button-solid {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+      background-color: var(--primary);
+      padding: 1rem 2.5rem;
+      border-radius: 0.25rem;
+      transition: background-color 0.3s ease;
+    }
+    
+    .cs-image-wrapper {
+      width: 100%;
+      max-width: 50rem;
+      height: auto;
+      aspect-ratio: 16/10;
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .cs-image-overlay { // Optional subtle overlay
+        position: absolute;
+        top:0; left:0; width:100%; height:100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 50%);
+      }
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #service-hero {
+    .cs-container {
+      flex-direction: row;
+      text-align: left;
+      gap: 3rem;
+    }
+    .cs-content {
+      width: 50%;
+      align-items: flex-start; // Align items to start on desktop
+    }
+    .cs-image-wrapper {
+      width: 50%;
+      margin-top: 0;
+      height: 25rem; // Fixed height on desktop
+    }
+  }
+}
+
+
+/*-- -------------------------- -->
+<---    Service Intro/Philosophy  -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #service-intro {
+    padding: clamp(3rem, 8vw, 5rem) 1rem;
+    background-color: #fff;
+
+    .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .cs-image-side {
+      width: 100%;
+      max-width: 30rem;
+      margin: auto;
+      height: auto;
+      aspect-ratio: 4/5;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .cs-content-side {
+      text-align: center;
+    }
+
+    .cs-topper {
+      display: block; // Changed to block for center alignment
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .cs-title {
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      color: #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    .cs-text {
+      color: #4e4b66;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .cs-perks-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cs-perk-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    .cs-perk-icon {
+       width: 1.75rem; height: 1.75rem;
+       // Example to color SVGs if they are monochrome and embedded as <img>
+       // filter: invert(33%) sepia(98%) saturate(1352%) hue-rotate(190deg) brightness(94%) contrast(97%); // var(--primary)
+    }
+
+    .cs-button-transparent {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--primary);
+      background-color: transparent;
+      padding: 0.875rem 2rem;
+      border: 2px solid var(--primary);
+      border-radius: 0.25rem;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      &:hover {
+        background-color: var(--primary);
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #service-intro {
+    .cs-container {
+      flex-direction: row;
+      align-items: center;
+      gap: 4rem;
+    }
+    .cs-image-side {
+      width: 45%;
+      max-width: none;
+      height: 35rem; // Fixed height
+    }
+    .cs-content-side {
+      width: 55%;
+      text-align: left;
+    }
+    .cs-perks-list {
+        align-items: flex-start;
+    }
+  }
+}
+
+
+/*-- -------------------------- -->
+<---      Signature Services    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #signature-services {
+    padding: clamp(3rem, 8vw, 5rem) 1rem;
+    background-color: #f0f4f8; // A very light, cool gray
+
+    .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+    }
+
+    .cs-heading {
+      text-align: center;
+      max-width: 45rem;
+      margin: 0 auto 3rem auto;
+    }
+
+    .cs-topper {
+      display: block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cs-title {
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    .cs-text {
+      color: #4e4b66;
+      line-height: 1.6;
+    }
+
+    .cs-services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cs-service-item {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column; // Stack icon and content on mobile
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+    }
+
+    .cs-icon-wrapper {
+      background-color: rgba(106, 13, 173, 0.15);
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      
+      .cs-icon {
+        width: 2.5rem; height: 2.5rem;
+        // Assuming SVGs are primarily one color, can use filter to color them to --primary
+        // filter: invert(33%) sepia(98%) saturate(1352%) hue-rotate(190deg) brightness(94%) contrast(97%);
+      }
+    }
+
+    .cs-service-name {
+      font-size: 1.375rem;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .cs-service-desc {
+      color: #4e4b66;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1; // Allows description to take available space
+    }
+
+    .cs-service-price {
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #signature-services {
+    .cs-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .cs-service-item {
+        flex-direction: row; // Icon beside content
+        text-align: left;
+        align-items: flex-start; // Align items to top
+        gap: 1.5rem;
+    }
+    .cs-icon-wrapper {
+        margin-bottom: 0; // Remove bottom margin
+        flex-shrink: 0; // Prevent icon wrapper from shrinking
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #signature-services {
+    .cs-services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+
+/*-- -------------------------- -->
+<---     Service Highlight/USP  -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #service-highlight {
+    padding: clamp(3rem, 8vw, 5rem) 1rem;
+    background-color: #fff;
+
+    .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .cs-content {
+      text-align: center;
+    }
+
+    .cs-topper {
+      display: block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cs-title {
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      color: #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    .cs-text {
+      color: #4e4b66;
+      line-height: 1.7;
+      margin: 0 auto 2rem auto;
+      max-width: 40rem;
+    }
+
+    .cs-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cs-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: #f8f8f8;
+      padding: 1rem;
+      border-radius: 0.375rem;
+      font-size: 0.95rem;
+      color: #333;
+      
+      .cs-feature-icon {
+        width: 2rem; height: 2rem; flex-shrink: 0;
+        // filter for primary color if needed
+      }
+      strong { color: #1a1a1a; }
+    }
+
+    .cs-image-collage {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      
+      .cs-collage-img {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #service-highlight {
+    .cs-feature-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .cs-image-collage {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        .cs-collage-img1 { height: 20rem;}
+        .cs-collage-img2 { height: 20rem;}
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #service-highlight {
+    .cs-container {
+      flex-direction: row-reverse; // Image collage first on desktop
+      align-items: center;
+    }
+    .cs-content {
+      width: 50%;
+      text-align: left;
+      padding-left:2rem; // If image on left
+    }
+    .cs-text{ margin: 0 0 2rem 0;}
+    .cs-image-collage {
+      width: 50%;
+      margin-top:0;
+      grid-template-columns: 1fr 1fr; // Keep two columns, or adjust as needed
+      .cs-collage-img1 { grid-column: ~"1 / 2"; height: 25rem; margin-top: -2rem;} // Example stagger
+      .cs-collage-img2 { grid-column: ~"2 / 3"; height: 22rem; margin-top: 2rem;}
+    }
+  }
+}
+
+/*-- -------------------------- -->
+<---         Booking CTA        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #booking-cta {
+    padding: clamp(3rem, 8vw, 5rem) 1rem;
+    background-color: #1a1a1a; // Dark background for CTA
+    background-image: url('/assets/images/barber-showcase-bg.jpg'); // Suggest a subtle background
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; // Or multiply, depending on image
+    position: relative;
+
+    &:before { // Dark overlay for text readability
+        content: '';
+        position: absolute;
+        top:0; left:0; width:100%; height:100%;
+        background-color: rgba(26,26,26,0.85); // Darker overlay
+        z-index: 1;
+    }
+
+    .cs-container {
+      width: 100%;
+      max-width: 50rem; // More focused CTA
+      margin: auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cs-title {
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .cs-text {
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    .cs-button-solid {
+      display: inline-block; // Changed from inline-block
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+      background-color: var(--primary);
+      padding: 1rem 2.5rem;
+      border-radius: 0.25rem;
+      transition: background-color 0.3s ease;
+      margin: 0.5rem;
+      white-space: nowrap;
+      &:hover {
+        background-color: #520A84;
+      }
+    }
+    
+    .cs-button-transparent {
+      display: inline-block; // Changed from inline-block
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+      background-color: transparent;
+      padding: 1rem 2.5rem;
+      border: 2px solid #fff;
+      border-radius: 0.25rem;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+      white-space: nowrap;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+// No specific tablet/desktop overrides needed for this CTA structure if centered text is fine.
+// If buttons need to be side-by-side on larger screens:
+@media only screen and (min-width: 48rem) {
+    #booking-cta {
+        .cs-button-solid, .cs-button-transparent {
+            // Can add display: inline-block and margins if needed
+        }
+    }
+}
