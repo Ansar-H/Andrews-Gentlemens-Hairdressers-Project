@@ -1,8 +1,8 @@
 module.exports = {
-  name: "Southwest Prestige Hire",
-  email: "southwestprestigehire@gmail.com",
-  phoneForTel: "44-1234-567-890",
-  phoneFormatted: "(44) 1234-567890",
+  name: "Andrews Gentlemens Hairdresser",
+  email: "email@gmail.com",
+  phoneForTel: "07708 698960",
+  phoneFormatted: "(44) 07708 698960",
   address: {
     city: "Bristol",
     country: "UK",
@@ -13,5 +13,5 @@ module.exports = {
     instagram: "https://www.instagram.com/",
   },
   //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-  domain: "https://southwestprestigehire.co.uk",
+  domain: "https://example.com",
 };
