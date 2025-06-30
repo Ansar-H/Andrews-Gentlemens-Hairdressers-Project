@@ -31,10 +31,6 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #sbs-r-870 .cs-title {
-    /* 17 characters wide including spaces */
-    max-width: 17ch;
-  }
   #sbs-r-870 .cs-text {
     margin-bottom: 1rem;
   }
@@ -1086,7 +1082,6 @@
   z-index: 1;
 }
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin: 0.5rem 0 0;
   background: none;
